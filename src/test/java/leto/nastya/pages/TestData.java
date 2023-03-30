@@ -19,8 +19,7 @@ public class TestData {
 
     @BeforeAll
     static void beforeAll() {
-        Configuration.browserSize = "1920x1080";
-        Configuration.holdBrowserOpen = true;
+        Configuration.browser = "chrome";
         Configuration.browserVersion = "100.0";
         Configuration.browserSize = "1920x1080";
         Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
