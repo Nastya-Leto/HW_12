@@ -1,14 +1,18 @@
 package leto.nastya.pages;
 
+import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
 import static io.qameta.allure.Allure.step;
 
-
 public class FormTest extends TestData {
     RegistrationPage registrationPage = new RegistrationPage();
 
+    @BeforeAll
+    static void beforeAll() {
+        TestBase.beforeAll();
+    }
     @Test
     void fillFormTest() {
 
@@ -48,7 +52,5 @@ public class FormTest extends TestData {
                     .verifyResults("State and City", userState + " " + userCity);
 
         });
-
-
     }
 }
